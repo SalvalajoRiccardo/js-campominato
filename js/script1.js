@@ -48,6 +48,7 @@ if (poolInserito.length == 84) {
     console.log("hai vinto");
 }
 
+console.log("punteggio: " + poolInserito.length);
 
 
 // Funzioni

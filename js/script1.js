@@ -1,30 +1,41 @@
+var difficolta = parseInt((prompt("inserisci la difficoltà, da 1 a 3")));
+while (isNaN(difficolta) || difficolta <= 0 || difficolta > 3)  {
+    difficolta = parseInt((prompt("Attenzione! inserisci la difficoltà, da 1 a 3 ")));
+
+}
+
 
 var arrayCampo = []
 
-while (arrayCampo.length < 16) {
-    var numR = ramdomNum(1,100)
-    if (!arrayCampo.includes(numR)) {
-        arrayCampo.push(numR)
-    }
+if (difficolta == 1) {
+    arrayCampo = diff(1,100)
+} else if (difficolta == 2) {
+    arrayCampo = diff(1,80)
+} else {
+    arrayCampo = diff(1,50)
 }
+
 
 console.log(arrayCampo);
 
-// var inserito = prompt('inserisci un numero da 1 a 100');
+
 var poolInserito = [];
 
+
+
 var p = 0;
-var semaforo =true
+var semaforo = true;
+
 while (poolInserito.length < 84 && semaforo == true) {
     var inserito = parseInt((prompt('inserisci un numero da 1 a 100')));
-    while (isNaN(inserito) || poolInserito.includes(inserito))  {
+    while (isNaN(inserito) || poolInserito.includes(inserito) || inserito <= 0 ||inserito > 100)  {
         inserito = parseInt((prompt("Attenzione! inserisci un numero da 1 a 100 che non hai già inserito")));
     
     }
     
     if (arrayCampo.includes(inserito)) {
         console.log("hai perso");
-        semaforo = false
+        semaforo = false;
     } else {
         poolInserito.push(inserito);
         console.log(poolInserito);
@@ -39,27 +50,17 @@ if (poolInserito.length == 84) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Funzioni
 function ramdomNum(min,max) {
     return Math.floor(Math.random() * (max - min + 1)  + min);
+}
+
+function diff(x,y) {
+    while (arrayCampo.length < 16) {
+        var numR = ramdomNum(x,y)
+        if (!arrayCampo.includes(numR)) {
+            arrayCampo.push(numR)
+        }
+    }
+    return arrayCampo;
 }

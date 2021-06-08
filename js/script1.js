@@ -2,9 +2,9 @@
 var arrayCampo = []
 
 while (arrayCampo.length < (100 - 16)) {
-    var NumR = ramdomNum(1,100)
-    if (!arrayCampo.includes(NumR)) {
-        arrayCampo.push(NumR)
+    var numR = ramdomNum(1,100)
+    if (!arrayCampo.includes(numR)) {
+        arrayCampo.push(numR)
     }
 }
 

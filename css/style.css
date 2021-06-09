@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:grey ;
+}
+
+#cominciamo {
+    padding: 20px;
+    color: darkred;
+    border: 1px solid darkred;
+    background-color: rgb(59, 59, 59);
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+h1, h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:red;
+    text-transform: uppercase;
+    
+}
+
+span {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkred
+}
+
+.cont {
+    background-color: black;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#dati {
+    display: flex;
+    justify-content: space-around;
+}
